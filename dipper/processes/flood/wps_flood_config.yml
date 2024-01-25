@@ -1,0 +1,59 @@
+
+logname: PYWPS
+
+quantiles:
+    # note: more levels can be added or removed, the "none" level must be here though!
+    none:
+        quantile: 0.0
+        color_rgba: [0.39, 0.79, 0.85, 0.2]
+        colorbar: false
+    low:
+        quantile: 0.9
+        color_rgba: [0.16, 0.8, 0.18, 0.9]
+    medium:
+        quantile: 0.95
+        color_rgba: [1.0, 0.96, 0.31, 0.9]
+    high:
+        quantile: 0.99
+        color_rgba: [0.85, 0.18, 0.25, 0.9]
+
+# the base flood level is the flow that gives no warning (the "none" level in the quantiles)
+basefloodlevel: 0
+
+shapefile: 'data/EHYPE_TotalDomain_WGS84_20140428_2_rev20150415.shp'
+_shapefile: 'data/test1.shp'
+
+plots:
+    warning_plot:
+        title: 'Flood risk'
+        subtitle: '?'
+        shortname: 'plot weeks levels'
+        abstract: 'Graphical visualisation of the Flood forecast per week'
+        filename: 'plot_week.png'
+        dpi: 300
+    timing_plot_2:
+        title: 'Flood timing'
+        subtitle: 'Forecast week of first occuring warning level'
+        shortname: 'plot flood timing'
+        abstract: 'Graphical visualisation of the Flood forecast timing'
+        filename: 'plot_timing.png'
+        dpi: 300
+
+# reference
+reference:
+    floodlimitsnc: 'data/flood_limits.nc'  # actual river flow limits for the levels set in FLOODLEVELS (see .py) -created if missing
+    datespan:
+        start: "1970-01-01"
+        stop: "2010-12-31"
+    _referenceperiodnc: '/data/proj/Fouh/staff/Jorgen.Rosberg/CLINT/birdhouse/testdata/timeCOUT_week.nc'
+    referenceperiodnc: 'testdata/timeCOUT_week.nc'
+    dim_time: 'time'
+    var_data: 'cout_dd'
+
+# forecast dates
+forecast:
+    date_format: "%Y-%m-%d"
+#    var_data: 'cout_dd'
+#    datespan:
+#        start: '2022-12-07' # format: YYYY-mm-dd
+#        stop: '2022-12-17' # format: YYYY-mm-dd
