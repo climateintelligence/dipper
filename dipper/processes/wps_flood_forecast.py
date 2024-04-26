@@ -20,7 +20,7 @@ from flood import getFloodlimits, getFloodlevels, floodConfig, wps_flood_forecas
 import logging
 LOGGER = logging.getLogger("PYWPS")
 # LOGNAME = LOGGER.name + '-debug.log'
-LOGNAME = tempfile.mkstemp(".log", f"{LOGGER.name}-debug-")
+LOGNAME = tempfile.mkstemp(".log", f"{LOGGER.name}-debug-")[1]
 filehandler_dbg = logging.FileHandler(LOGNAME, mode='w')
 filehandler_dbg.setLevel('DEBUG') 
 #Create custom formats of the logrecord fit for both the logfile and the console
