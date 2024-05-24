@@ -31,6 +31,3 @@ build:
 
 conda:
   environment: environment-docs.yml
-
-build:
-  image: stable
