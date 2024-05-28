@@ -38,7 +38,7 @@ Documentation
 -------------
 
 Learn more about dipper in its official documentation at
-https://dipper.readthedocs.io.
+https://clint-dipper.readthedocs.io/en/latest/.
 
 Submit bug reports, questions and feature requests at
 https://github.com/clint/dipper/issues
@@ -55,7 +55,7 @@ License
 -------
 
 * Free software: Apache Software License 2.0
-* Documentation: https://dipper.readthedocs.io.
+* Documentation: https://clint-dipper.readthedocs.io/en/latest/.
 
 
 Credits
