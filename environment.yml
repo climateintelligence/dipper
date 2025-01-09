@@ -1,7 +1,6 @@
 name: dipper
 channels:
 - conda-forge
-- defaults
 dependencies:
 - pip
 - python>=3.7,<3.10
